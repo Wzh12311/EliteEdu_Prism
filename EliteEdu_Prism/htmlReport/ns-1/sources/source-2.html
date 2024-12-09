@@ -1,0 +1,261 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=GBK"> 
+  <title>Coverage Report > AssignmentServiceImpl</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">com.example.eliteedu_prism.EliteEdu_Prism.service.impl</a>
+</div>
+
+<h1>Coverage Summary for Class: AssignmentServiceImpl (com.example.eliteedu_prism.EliteEdu_Prism.service.impl)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">AssignmentServiceImpl</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    24.1%
+  </span>
+  <span class="absValue">
+    (7/29)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    24.1%
+  </span>
+  <span class="absValue">
+    (7/29)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package com.example.eliteedu_prism.EliteEdu_Prism.service.impl;
+&nbsp;
+&nbsp;import com.example.eliteedu_prism.EliteEdu_Prism.mapper.AssignmentMapper;
+&nbsp;import com.example.eliteedu_prism.EliteEdu_Prism.pojo.*;
+&nbsp;import com.example.eliteedu_prism.EliteEdu_Prism.service.AssignmentService;
+&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+&nbsp;import org.springframework.stereotype.Service;
+&nbsp;
+&nbsp;import java.util.List;
+&nbsp;
+&nbsp;@Service
+<b class="fc">&nbsp;public class AssignmentServiceImpl implements AssignmentService {</b>
+&nbsp;
+&nbsp;    @Autowired
+&nbsp;    AssignmentMapper assignmentmapper;
+&nbsp;    @Override
+&nbsp;    public void uploadAssignment(Assignment assignment) {
+<b class="nc">&nbsp;        assignmentmapper.uploadAssignment(assignment);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public List&lt;Assignment&gt; getAssignments(int courseId) {
+<b class="fc">&nbsp;        return assignmentmapper.getAssignments(courseId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public void submitStudentAssignment(StudentAssignment studentAssignment) {
+<b class="nc">&nbsp;        assignmentmapper.submitStudentAssignment(studentAssignment);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public List&lt;StudentAssignment&gt; getStudentSubmissions(int courseId, int userId) {
+<b class="nc">&nbsp;        return assignmentmapper.getStudentSubmissions(courseId,userId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public List&lt;StudentAssignment&gt; getStudentSubmissions1(int courseId, int userId) {
+<b class="nc">&nbsp;        return assignmentmapper.getStudentSubmissions1(courseId,userId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public List&lt;StudentAssignment&gt; getStudentAssignments(int assignmentId) {
+<b class="nc">&nbsp;        return assignmentmapper.getStudentAssignments(assignmentId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public void gradeAssignment(int studentAssignmentId, int score,int grader) {
+<b class="nc">&nbsp;        assignmentmapper.gradeAssignment(studentAssignmentId,score,grader);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public List&lt;Integer&gt; allspstudent(int assignmentId) {
+<b class="fc">&nbsp;        return assignmentmapper.allspstudent(assignmentId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public void assignPeerReview(int studentId, int assignmentId, int grader) {
+<b class="nc">&nbsp;        assignmentmapper.assignPeerReview(studentId,assignmentId,grader);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public List&lt;PeerEvaluation&gt; getPeerReviewAssignments(int courseId, int userId) {
+<b class="nc">&nbsp;        return assignmentmapper.getPeerReviewAssignments(courseId,userId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public List&lt;Assignment&gt; getPeerAssignments(int courseId) {
+<b class="fc">&nbsp;        return assignmentmapper.getPeerAssignments(courseId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public void submitPeerStudentAssignment(PeerEvaluation studentAssignment) {
+<b class="nc">&nbsp;        assignmentmapper.submitPeerStudentAssignment(studentAssignment);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public List&lt;StudentAssignment&gt; getPeerStudentSubmissions(int courseId, int userId) {
+<b class="fc">&nbsp;        return assignmentmapper.getPeerStudentSubmissions(courseId,userId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public void submitPeerReview(PeerEvaluation peerEvaluation) {
+<b class="nc">&nbsp;        assignmentmapper.submitPeerReview(peerEvaluation);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public List&lt;Assignment&gt; getAssignments2(int courseId) {
+<b class="nc">&nbsp;        return assignmentmapper.getAssignments2(courseId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public int getTeacherId(int assignmentId) {
+<b class="fc">&nbsp;        return assignmentmapper.getTeacherId(assignmentId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public List&lt;PeerEvaluation&gt; getpeer(int assignmentId) {
+<b class="nc">&nbsp;        return assignmentmapper.getpeer(assignmentId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public User getSender(int courseId) {
+<b class="fc">&nbsp;        return assignmentmapper.getSender(courseId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public void Notice(Notifications notifications) {
+<b class="nc">&nbsp;        assignmentmapper.Notice(notifications);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public List&lt;User&gt; getuser(int courseId) {
+<b class="nc">&nbsp;        return assignmentmapper.getuser(courseId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public void sendNotice(int id, int userId) {
+<b class="nc">&nbsp;        assignmentmapper.sendNotice(id,userId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public Assignment getAssignment(int assignmentId) {
+<b class="nc">&nbsp;        return assignmentmapper.getAssignment(assignmentId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public int getpeerId(int assignmentId, int userId) {
+<b class="nc">&nbsp;        return assignmentmapper.getpeerId(assignmentId,userId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public Assignment getAssignmentId(int studentAssignmentId) {
+<b class="nc">&nbsp;        return assignmentmapper.getAssignmentId(studentAssignmentId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public int getAssignmentstudent(int studentAssignmentId) {
+<b class="nc">&nbsp;        return assignmentmapper.getAssignmentstudent(studentAssignmentId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public Assignment getAssignmentPeer(int peerEvaluationId) {
+<b class="nc">&nbsp;        return assignmentmapper.getAssignmentPeer(peerEvaluationId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public int getAssignmentpeerstudent(int peerEvaluationId) {
+<b class="nc">&nbsp;        return assignmentmapper.getAssignmentpeerstudent(peerEvaluationId);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public Comments getcomment(int id) {
+<b class="nc">&nbsp;        return assignmentmapper.getcomment(id);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-11-27 15:20</div>
+</div>
+</body>
+</html>
